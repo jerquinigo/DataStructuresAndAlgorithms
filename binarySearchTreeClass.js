@@ -19,6 +19,7 @@ class BinarySearchTree {
     } else {
       let current = this.root;
       while (true) {
+        if (value === current.value) return undefined;
         if (value < current.value) {
           if (current.left === null) {
             current.left = newNode;
@@ -43,6 +44,8 @@ let tree = new BinarySearchTree();
 tree.insert(10);
 tree.insert(5);
 tree.insert(13);
+tree.insert(10);
+
 // tree.insert(30)
 
 console.log(tree);
