@@ -38,6 +38,16 @@ class BinarySearchTree {
       }
     }
   }
+
+  contains(value) {
+    if (this.root === null) return false;
+    let current = this.root;
+    let found = false;
+    while (current && !found) {
+      if (value < current.value) {
+      }
+    }
+  }
 }
 
 let tree = new BinarySearchTree();
