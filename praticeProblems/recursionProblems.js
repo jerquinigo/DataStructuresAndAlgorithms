@@ -54,3 +54,42 @@ let countEight = (num) => {
   }
   
   countEightRec(8818)
+
+
+
+  // Given a string, return recursively a "cleaned" string where adjacent chars that are the same have been reduced to a single char. So "yyzzza" yields "yza".
+
+
+// stringClean("yyzzza") → "yza"
+// stringClean("abbbcdd") → "abcd"
+// stringClean("Hello") → "Helo"
+
+// iterative approach
+let cleanString = (str) => {
+    let idx = 0
+    let output =""
+    while(idx <= str.length){
+      if(str[idx] !== str[idx + 1]){
+        output = output + str[idx]
+      }
+      idx++
+    }
+  return output
+  }
+  
+  
+  cleanString("yyzzza")
+  
+  // recursive approach
+  const cleanStringRec = (str) => {
+    if(str.length === 0) return ""
+    let output = ""
+  
+    if(str[0] !== str[1]){
+      output = output + str[0]
+    }
+    return output + cleanStringRec(str.slice(1))
+  }
+  
+  cleanStringRec("yyzzza")
+  
