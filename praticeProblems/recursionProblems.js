@@ -93,3 +93,38 @@ let cleanString = (str) => {
   
   cleanStringRec("yyzzza")
   
+
+  // Given an array of ints, compute recursively if the array contains somewhere a value followed in the array by that value times 10. We'll use the convention of considering only the part of the array that begins at the given index. In this way, a recursive call can pass index+1 to move down the array. The initial call will pass in index as 0.
+
+
+// array220([1, 2, 20], 0) → true
+// array220([3, 30], 0) → true
+// array220([3], 0) → false
+
+
+
+const multTenCheck = (arr, idx) => {
+
+    let ten = 10
+    while(idx < arr.length){
+      if(arr[idx] * ten === arr[idx + 1]){
+        return true
+      }
+      idx++
+    }
+    return false
+  }
+  
+  multTenCheck([1,2,20], 0)
+  
+  
+  const multTenCheckRec = (arr, idx) => {
+    if(idx <= arr.length) return false
+      if(arr[idx] * 10 === arr[idx + 1]){
+        return true
+      }
+  
+    return multTenCheckRec(arr, idx + 1)
+  }
+  
+  multTenCheckRec([1,2,20],0)
