@@ -176,3 +176,16 @@ const checkNest = (str) => {
 }
 
 checkNest("(())")
+
+
+const changePi = (str) => {
+  if(!str) return ""
+  if(str[0]+ str[0+1] === "pi"){
+    return "3.14" + changePi(str.slice(2))
+  }
+  else{
+    return str[0] + changePi(str.slice(1))
+  }
+}
+
+changePi("xpix")
