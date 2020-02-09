@@ -128,3 +128,29 @@ const multTenCheck = (arr, idx) => {
   }
   
   multTenCheckRec([1,2,20],0)
+
+
+
+
+// Given a string, compute recursively (no loops) a new string where all the lowercase 'x' chars have been changed to 'y' chars.
+
+
+// changeXY("codex") → "codey"
+// changeXY("xxhixx") → "yyhiyy"
+// changeXY("xhixhix") → "yhiyhiy"
+
+const changeChar = (str) => {
+  if(!str) return ""
+  let output = ""
+  if(str[0].toLowerCase() === 'x'){
+    str[0] = 'y'
+  }
+  else if(str[0].toLowerCase() === 'x'){
+    str[0] = 'x'
+  }
+
+  return output + changeChar(str.slice(1))
+}
+
+
+changeChar("codex")
