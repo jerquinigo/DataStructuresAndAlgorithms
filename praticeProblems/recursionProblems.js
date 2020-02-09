@@ -252,4 +252,33 @@ const strCount = (str, sub) => {
 
 strCount("catcowcat", "cat")
 
+// print out each element in order
+//expected output = 1,2,3,4,5,6,7,8,9
 
+
+let mtx = [[1,2,3],[4,5,6],[7,8,9]]
+
+const printMtx = (mtx) => {
+    if(mtx.length === 0) return 
+    // console.log(mtx[0][0], "no slice")
+    // mtx[0] = mtx[0].slice(1)
+    // console.log(mtx[0][0], "first slice")
+    // mtx[0] = mtx[0].slice(1)
+    // console.log(mtx[0][0], "second slice")
+    // console.log(mtx[0].length, "length of the second slice")
+    // mtx[0] = mtx[0].slice(1)
+    // console.log(mtx[0][0], "third slice")
+
+    if(mtx[0].length === 1){
+        console.log(mtx[0][0])
+        return printMtx(mtx.slice(1))
+    }
+    else{
+        console.log(mtx[0][0])
+        mtx[0] = mtx[0].slice(1)
+        return printMtx(mtx)
+    }
+    
+}
+
+printMtx(mtx)
