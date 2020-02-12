@@ -53,3 +53,30 @@ const swap = (arr,leftIdx,rightIdx) => {
   console.log(quickResult)
   //results [-1,2,4,6,7,11,77,88,99]
   //Quick sort runs with the Time Complexity of O(nlogn)
+
+
+
+//quick sort recursively 
+
+const quickSortRec = (arr) => {
+    if(arr.length <= 1) return arr
+    let left = []
+    let right = []
+  
+    for(let i = 1; i < arr.length; i++){
+      if(arr[i] < arr[0]){
+        left.push(arr[i])
+      }
+      if(arr[i] >= arr[0]){
+        right.push(arr[i])
+      }
+    }
+  
+      return [...quickSortRec(left), arr[0], ...quickSortRec(right)]
+    //return quickSortRec(left).concat(arr[0], quickSortRec(right))
+  
+  }
+  
+  
+  quickSortRec([3,1,6,1,2,4])
+  //results [1,1,2,3,4,6]
