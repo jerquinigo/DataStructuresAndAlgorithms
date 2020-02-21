@@ -77,3 +77,74 @@ list.pop();
 list.shift();
 list.unshift("hello");
 console.log(list);
+
+
+
+//adding singly linked list class 
+
+class Node{
+  constructor(val){
+    this.val = val;
+    this.next = null
+  }
+}
+
+
+class LinkedList{
+  constructor(){
+    this.head = null
+  }
+
+  push(val){
+    let newNode = new Node(val)
+    if(this.head === null){
+      this.head = newNode
+      return this
+    }
+    else{
+      let current = this.head
+      while(current.next !== null){
+        current = current.next
+      }
+      current.next = newNode
+      return this
+    }
+  }
+
+  popHead(){
+    let oldHead = this.head
+    this.head = this.head.next
+
+    return oldHead.val
+  }
+
+  popTail(){
+    let current = this.head
+    let tail = null
+    while(current.next !== null){
+      current = current.next
+    }
+    tail = current
+    current = null
+    return tail
+  }
+
+  print(){
+    let current = this.head
+    //while there is a current, keep printing
+    while(current){
+      console.log(current.val)
+      current = current.next
+    }
+  }
+}
+
+//to chain it, you will have to return this
+let list = new LinkedList()
+list.push(5).push(10).push(15)
+//list.popHead()
+list.popTail()
+list.print()
+
+
+
