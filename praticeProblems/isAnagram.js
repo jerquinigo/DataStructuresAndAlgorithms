@@ -15,6 +15,7 @@ const isAnagram = (str1, str2) => {
     }
   
     //shortcut for same loop on top
+    // of gets the element in the loop. In will get the index
     // for (let letters of str1){
     //   if(letters[letter]){
     //     letters[letter]++ 
