@@ -37,8 +37,8 @@ class Node{
       while(current !== null){
         
         if(current.val === target){
-          console.log(currTemp.val, "the temp")
           currTemp.next = current.next
+          this.length--
           return console.log(current.val, "the value")
   
           
