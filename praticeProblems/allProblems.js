@@ -29,3 +29,6 @@ const uniqueOccurance = (arr) => {
   
   uniqueOccurance([1,2,1,3,3,3])
   //return true
+
+
+
