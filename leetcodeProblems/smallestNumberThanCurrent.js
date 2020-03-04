@@ -37,3 +37,45 @@ const smallerNumberThanCurrent = (arr) => {
   
   
   smallerNumberThanCurrent([8,1,2,2,3])
+
+
+
+//! this answer is not correct. There are a few problems with this solution even though it is correctly doing the recursive call. The variables are resetting every time, even if i put a constant variable. This was hardcoded but the logic of recursion is there with a helper function. 
+
+
+
+// Recursive call
+  const smallerNumberThanCurrent = (arr) => {
+
+    let count = 0
+    let newArr = []
+    if(arr.length === 0) return newArr
+    count = loopingValues([8,1,2,2,3], count, arr[0])
+    newArr.push(count)
+    count = 0
+    return newArr + smallerNumberThanCurrent(arr.slice(1))
+  
+    
+  }
+  
+  
+  smallerNumberThanCurrent([8,1,2,2,3])
+  
+  // helper function for smallerNumberThanCurrent
+  function loopingValues(arr, count, currentValue){
+    for(let i = 0; i < arr.length; i++){
+      if(arr[i] !== currentValue){
+        if(arr[i] < currentValue){
+         count = count + 1
+        }
+      }
+    }
+    return count
+  }
+  
+
+  // end of problem
+
+
+
+  //https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number/
