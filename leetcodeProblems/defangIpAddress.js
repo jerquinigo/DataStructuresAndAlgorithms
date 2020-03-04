@@ -39,7 +39,7 @@ const defangIp = (str) => {
       newStr += "[.]"
     }
     else{
-      newStr = str[0]
+      newStr += str[0]
     }
     
     return newStr + defangIp(str.slice(1))
