@@ -127,3 +127,54 @@ function isIncluded(arr, target){
   }
   
   isIncluded([1,2,3,4,5,6,7,8,9,10], 7)
+
+  // getMiddle - function that returns the middle character of a string. If the length is even it should return the middle two characters.
+
+// function getMiddle(str){
+//   let middle = Math.floor(str.length / 2)
+//   if(str.length % 2 === 0){
+//     return str[middle] 
+//   }
+//   else{
+//      return str[middle] + str[middle + 1]
+//   }
+// }
+
+// getMiddle("hello")
+
+
+// palindromeSubstrings - a function that takes in a string and returns an array of all the palindrome substrings.
+
+// function palindromeSubstrings(str){
+//    let output = [];
+//   for(let i = 0; i < str.length; i++) {
+//     for(let j = 0; j <= str.length; j++) {
+//       let temp = str.slice(i, j)
+//       if(paliChecker(temp)) {
+//         output.push(temp)
+//       }
+//     }
+//   }
+//   return output
+// }
+
+// function paliChecker(str){
+//     if(str.length < 2) return false
+//     return str === str.split("").reverse().join("")
+// }
+// palindromeSubstrings("hello there taco cat or racecar driver")
+
+// disemvowel - a function that removes all the vowels from a string.
+
+function disemvowel(str){
+    let vowels = new Set(["a","e","i","o", "u"])
+    str = str.split("")
+    for(let i = 0; i < str.length; i++){
+      if(vowels.has(str[i])){
+        str.splice(i, 1)
+      }
+    }
+    return str.join("")
+  }
+  
+  disemvowel("happy go lucky")
