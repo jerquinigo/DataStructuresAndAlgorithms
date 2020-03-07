@@ -251,3 +251,109 @@ function secondLargest(arr){
 }
 
 secondLargest([1,3,5,4,9,2])
+
+// factors - a function that returns the factors of a number in ascending order.
+
+function factors(num){
+  let output = []
+  for(let i = 1; i <= num; i++){
+    if(num % i === 0){
+      output.push(i)
+    }
+  }
+  return output
+}
+
+factors(10)
+
+// sum - a function that returns the sum of all numbers.
+
+// function mySum(arr){
+//   let result = 0
+//   for(let i = 0; i < arr.length; i++){
+//     result = result + arr[i]
+//   }
+//   return result
+// }
+
+// mySum([1,2,3,4,5])
+
+// product - a function that returns the product of all numbers.
+
+// function myProduct(arr){
+
+//   if(arr.length === 0) return 0
+
+//   result = 1
+//   for(let i = 0; i < arr.length; i++){
+//     result = result * arr[i]
+//   }
+//   return result
+// }
+
+// myProduct([2,3,4])
+
+
+// getProps - a function that takes in an object and returns the keys .
+
+// function getMyProps(obj){
+//   let resultKeys = []
+//   for(let i in obj){
+//     resultKeys.push(i)
+//   }
+//   return resultKeys
+// }
+
+// getMyProps({"value1": 10, "value2": 20, "value3":30})
+
+
+// getValues - a function that takes in an object and returns the values.
+
+// function getValues(obj){
+//   let output = []
+//   for(let i in obj){
+//     output.push(obj[i])
+//   }
+//   return output
+// }
+
+// getValues({"value1": 10, "value2": 20, "value3":30})
+
+
+
+// getAverageAge - a function that takes in an array of people objects. It should return the average age of all the objects.
+
+// function getAverageAge(obj){
+//   let result = 0
+//   let count = 0
+//   for(let i in obj){
+//     result = result + obj[i]
+//     count++
+//   }
+//   return (result / count).toFixed(2)
+// }
+
+// getAverageAge({"Nathalie": 26, "Jonathan": 28, "JonA": 26})
+
+// myRotate - a function that takes in an array and a shift number. The array should be rotated by that shift number. The shift should default to zero.
+
+// function myRotate(arr, shift = 0){
+//   let sliceArr = arr.slice(0)
+//   if(shift > 0){
+//     for(let i = 0; i < shift % arr.length; i++){
+//       let move = sliceArr.shift()
+//       sliceArr.push(move)
+//     }
+//   }
+//   else{
+//     for(let i = 0; i < Math.abs(shift) % arr.length; i++){
+//       let move = sliceArr.pop()
+//       sliceArr.unshift(move)
+//     }
+//   }
+
+//   return sliceArr
+
+// }
+
+// myRotate([1,3,5,7],-2)
