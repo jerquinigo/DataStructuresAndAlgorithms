@@ -178,3 +178,76 @@ function disemvowel(str){
   }
   
   disemvowel("happy go lucky")
+
+  // targetIndices - a function that takes in array of numbers and a target. Return the indices as an array of the pair of elements that add up to that target.
+
+// function targetIndices(arr,target){
+
+//   for(let i = 0; i < arr.length; i++){
+//     for(let j = i + 1; j< arr.length; j++){
+//       if(arr[i] + arr[j] === target){
+//         return [i,j]
+//       }
+//     }
+//   }
+// }
+
+// targetIndices([1,2,4,5,7], 9)
+
+
+// rangeWithStep - a function that takes three number variables: min, max and step. The block will log an array with all the numbers, inclusive, between min and max, , going up in increments equal to step. If no step value is provided, the increment will be 1
+
+// function rangeWithStep(min,max,step=1){
+//   let output = []
+//   for(let i = min; i <= max; i = i + step){
+//     output.push(i)
+//   }
+//   return output
+// }
+
+// rangeWithStep(4,10,3)
+
+
+// doubler - a function that doubles each element in an array.
+
+// function doubler(arr){
+//   let output = []
+//   for(let i = 0; i < arr.length; i++){
+//     output.push(arr[i] * 2)
+//   }
+//   return output
+// }
+
+// doubler([1,2,3,4,5,6,7,8,9])
+
+// function findLargest(arr){
+//   currentLargest = arr[0]
+//   for(let i = 0; i < arr.length; i++){
+//     if(currentLargest < arr[i]){
+//       currentLargest = arr[i]
+//     }
+//   }
+//   return currentLargest
+// }
+
+// findLargest([1,3,5,4,9,2])
+
+// secondLargest - a function that returns the second largest value in an array.
+
+function secondLargest(arr){
+  let firstLargest = Number.NEGATIVE_INFINITY
+  let secondLargest = Number.NEGATIVE_INFINITY
+
+  for(let i = 0; i < arr.length; i++){
+    if(arr[i] > firstLargest){
+      secondLargest = firstLargest
+      firstLargest = arr[i]
+    }
+    else if(arr[i] > secondLargest){
+      secondLargest = arr[i]
+    }
+  }
+  return secondLargest
+}
+
+secondLargest([1,3,5,4,9,2])
