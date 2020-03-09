@@ -357,3 +357,63 @@ factors(10)
 // }
 
 // myRotate([1,3,5,7],-2)
+
+
+
+// function myReapeat(str, repeater = 2){
+//   for(let i = 0; i < repeater; i++){
+//     console.log(str)
+//   }
+// }
+// myReapeat("hello")
+
+
+// noDups - a function that takes in an array and returns an array with no duplicate elements.
+
+// function noDups(arr){
+//   return arr.filter((el,idx) => {
+//     if(arr.indexOf(el) === idx){
+//       return el
+//     }
+//   })
+// }
+
+// noDups([1,1,1,1,13,3,3,3,3,3,3,4,5,6,66,6,6,6])
+
+// concatAndRemoveDupes - a function that takes in two arrays and returns one array with no duplicates elements.
+
+// function catAndDupes(arr1,arr2){
+//   let newArr = arr1.concat(arr2)
+  
+//   return newArr.filter((el, idx) => {
+//     if(newArr.indexOf(el) === idx){
+//       return el
+//     }
+//   })
+// }
+
+// catAndDupes([1,1,1,13,3,3,3,4,5,5,5,13,4], [55,55,4,4,3,3,3,5,5,5,1,1,1])
+
+
+// elementDivisibleBy - a function that takes in a divisor and arr. Use filter to return a new array of every element of arr that can be evenly divided by divisor.
+
+// function elementDivBy(divisor, arr){
+//   return arr.filter(el => {
+//     if(el % divisor === 0){
+//       return el
+//     }
+//   })
+// }
+
+// elementDivBy(5, [5,10,3,4,15,20,2])
+
+// numberTimesIdx - a function that takes in an array and returns an array with each element multiplied by it's index.
+
+// function numTimesIdx(arr){
+  
+//   return arr.map((el, idx) => {
+//     return el * idx
+//   })
+// }
+
+// numTimesIdx([2,4,6,8])
