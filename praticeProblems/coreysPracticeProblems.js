@@ -417,3 +417,32 @@ factors(10)
 // }
 
 // numTimesIdx([2,4,6,8])
+
+
+
+// Array.prototype.myForEach = function(callback){
+//   for(let i = 0; i < this.length; i++){
+//     console.log(callback(this[i]))
+//   }
+// }
+
+// let arr = [2,3,4]
+// arr.myForEach((el) => {
+//   return el * 2
+// })
+Array.prototype.myFlatten = function() {
+  let output = [];
+  for(let i = 0; i < this.length; i++) {
+    if(Array.isArray(this[i])) {
+      output =  output.concat(this[i].myFlatten())
+    } else {
+      output.push(this[i])
+    }
+  }
+  return output
+}
+
+let arr = [[1,2,3,[8,8,8]],[4,5,6],[7,8,9]]
+
+
+console.log(arr.myFlatten())
